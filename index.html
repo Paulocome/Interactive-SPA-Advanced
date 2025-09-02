@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive SPA Advanced</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Side menu -->
+<div id="sideMenu" class="sidemenu">
+  <button class="closeBtn" onclick="toggleMenu()">×</button>
+  <nav>
+    <button onclick="transitionTo('home')" title="Go to Home Page">Home</button>
+    <button onclick="transitionTo('about')" title="Learn About Us">About</button>
+    <button onclick="transitionTo('services')" title="See Our Services">Services</button>
+    <button onclick="transitionTo('portfolio')" title="View Portfolio">Portfolio</button>
+    <button onclick="transitionTo('contact')" title="Contact Us">Contact</button>
+  </nav>
+</div>
+
+<header>
+  <button class="menuBtn" onclick="toggleMenu()">☰ Menu</button>
+  <h1>Interactive SPA Advanced</h1>
+</header>
+
+<main>
+  <section id="home" class="page active">
+    <h2>Welcome</h2>
+    <p>Experience advanced SPA transitions and interactions.</p>
+    <button onclick="changeColor('blue')" title="Make text blue">Blue Text</button>
+    <button onclick="changeColor('orange')" title="Make text orange">Orange Text</button>
+  </section>
+
+  <section id="about" class="page">
+    <h2>About Us</h2>
+    <p>We develop interactive web apps with advanced SPA behavior.</p>
+  </section>
+
+  <section id="services" class="page">
+    <h2>Services</h2>
+    <ul>
+      <li>Web Development</li>
+      <li>UI/UX Design</li>
+      <li>Interactive Animations</li>
+    </ul>
+    <button onclick="startAnimation()">Animate Box</button>
+    <div class="box" id="box"></div>
+  </section>
+
+  <section id="portfolio" class="page">
+    <h2>Portfolio</h2>
+    <div class="card" onclick="flipCard(this)" title="Click to flip card">Click to flip</div>
+    <div class="card" onclick="flipCard(this)" title="Click to flip card">Click to flip</div>
+  </section>
+
+  <section id="contact" class="page">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <label>Name: <input type="text" name="name" required></label><br><br>
+      <label>Email: <input type="email" name="email" required></label><br><br>
+      <label>Message: <textarea name="message" required></textarea></label><br><br>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="formOutput"></p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Interactive SPA Advanced. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
